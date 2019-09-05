@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity"
+    android:background="@color/neonGreen">
+
+    <ImageView
+        android:id="@+id/app_name_Img"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/appname"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15dp"/>
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="20sp"
+        android:background="@drawable/round_edit_text"
+        android:padding="10dp"
+        android:layout_below="@+id/app_name_Img"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+         />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        app:passwordToggleEnabled = "true"
+        android:layout_centerHorizontal="true"
+        app:hintEnabled="false"
+        android:layout_marginTop="10dp"
+        app:passwordToggleDrawable="@drawable/ic_visibility_black_24dp">
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_edit_text"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:padding="10dp"
+         />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Login"
+        android:textColor="#000000"
+        android:onClick="login"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_round_corner_button"
+        android:layout_below="@+id/layout_password"
+        />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_round_corner_button"
+        android:layout_below="@+id/loginBtn"
+        android:layout_marginTop="10dp"
+        android:onClick="register"
+        />
+
+    <TextView
+        android:id="@+id/forgotPasswordBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="#000000"
+        android:layout_below="@+id/registerBtn"
+        android:onClick="forgot_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbarLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>
+</ScrollView>

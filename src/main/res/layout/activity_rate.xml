@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RateActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="15dp">
+
+        <Button android:id="@+id/goBtn"
+            android:layout_alignParentRight="true"
+            android:text="GO"
+            android:onClick="findUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonroundcorner"/>
+        <EditText android:id="@+id/user_search_box"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/goBtn"
+            android:layout_centerVertical="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter email"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:background="@drawable/round_edit_text"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name_search_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@id/RelativeLayout01"
+        android:text="Purvil Patel"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/email_search_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_below="@id/name_search_txt"
+        android:text="Purvil Patel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <RatingBar
+        android:id="@+id/rateBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_search_Txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:numStars="5"
+        />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSubmit"
+        android:background="@drawable/buttonroundcorner"
+        android:layout_below="@id/rateBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="SUBMIT"/>
+
+</RelativeLayout>
+</ScrollView>
